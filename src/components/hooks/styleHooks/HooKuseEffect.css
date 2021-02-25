@@ -1,0 +1,11 @@
+.HooKuseEffect{
+    text-align: center;
+}
+input[type="button"]{
+    outline: none;
+    padding: 5px;
+    margin: 5px;
+}
+.clock{
+    color: #cf573f;
+}
