@@ -14,6 +14,7 @@ import {CustomHooks} from "../hooks/CustomHooks";
 import AppContext from "../context/AppContext";
 import HookContext from "../hooks/HookContecst/HookContext";
 import ReactRouterMenu from "../reactRouter/ReactRouterMenu";
+import {BrowserRouter} from "react-router-dom";
 
 
 function Content(props) {
@@ -74,6 +75,7 @@ function Content(props) {
             break;
         case 'reactroutermenu':
             content=<ReactRouterMenu/>
+
             break;
 
 
