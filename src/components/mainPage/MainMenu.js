@@ -67,6 +67,16 @@ function MainMenu(props) {
                     key='hookcontext'
                     onClick={()=>props.changeName("hookcontext")}>hookContext</li>
 
+                <li
+                    className={props.name==='hookcontext'?'red':'blue'}
+                    key='hookcontext'
+                    onClick={()=>props.changeName("hookcontext")}>hookContext</li>
+
+                <li
+                    className={props.name==='reactroutermenu'?'red':'blue'}
+                    key='reactroutermenu'
+                    onClick={()=>props.changeName("reactroutermenu")}>reactRouterMenu</li>
+
 
             </ul>
         </div>
