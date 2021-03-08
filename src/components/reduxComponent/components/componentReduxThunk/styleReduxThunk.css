@@ -1,0 +1,17 @@
+.panelUser {
+    margin: 10px auto;
+    text-align: center;
+
+
+}
+
+.panelUser_table {
+    margin: 10px auto;
+    width: 60%;
+    table-layout: fixed;
+}
+
+.panelUser_table, .panelUser_table tr, .panelUser_table td {
+    border: 1px solid black;
+
+}

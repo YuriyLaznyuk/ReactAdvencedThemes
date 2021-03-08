@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {addCustomerAction, removeCustomerAction} from "./store/customerReducer";
+import {addCustomerAction, deleteCustomerAction, removeCustomerAction} from "./store/customerReducer";
 
 function Bank(props) {
     //хук управляет экшенами
@@ -31,6 +31,10 @@ function Bank(props) {
 // dispatch({type:'remove_customer', payload:customer.id})
 dispatch(removeCustomerAction(customer.id))
     }
+    function deleteCustomer(name) {
+        dispatch(deleteCustomerAction(name))
+
+    }
 
     return (
         <div className={'app'}>
@@ -39,7 +43,7 @@ dispatch(removeCustomerAction(customer.id))
                 <button onClick={() => addCash(Number(prompt()))}>Пополнить счет</button>
                 <button onClick={() => getCash(Number(prompt()))}>Снять со счета</button>
                 <button onClick={() => addCustomer(prompt())}>Добавить клиента</button>
-                <button onClick={() => getCash(Number(prompt()))}>Удалить клиента</button>
+                <button onClick={() => deleteCustomer(prompt())}>Удалить клиента</button>
 
             </div>
             <div>

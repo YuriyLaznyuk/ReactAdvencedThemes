@@ -4,6 +4,7 @@ const defaultState={
 
 const add_customer='add_customer';
 const remove_customer='remove_customer';
+const delete_customer='delete_customer';
 
 
 export const customerReducer = (state = defaultState, action) => {
@@ -15,6 +16,10 @@ export const customerReducer = (state = defaultState, action) => {
         case remove_customer:
             return {...state, customers: state.customers.filter(customer=>
                     customer.id!==action.payload)}
+
+        case delete_customer:
+            return {...state, customers: state.customers.filter(customer=>
+                    customer.name!==action.payload)}
 
 
         default:
@@ -28,4 +33,8 @@ return ({type:add_customer,payload})
 
 export function removeCustomerAction(payload) {
     return ({type:remove_customer,payload})
+}
+
+export function deleteCustomerAction(payload) {
+    return ({type: delete_customer, payload})
 }

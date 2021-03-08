@@ -3,6 +3,7 @@ import {store} from "./components/componentTutorial/store/index";
 import {Provider} from "react-redux";
 import Bank from "./components/componentTutorial/Bank";
 import BanRedux from "./components/componentBank/BanRedux";
+import ReduxThunk from "./components/componentReduxThunk/ReduxThunk";
 
 const action = {type: "?", payload: "?"}
 
@@ -17,6 +18,8 @@ const ReduxComponent = () => {
             <Bank/>
         </Provider>
             <BanRedux/>
+            <ReduxThunk/>
+
         </div>
     );
 };
