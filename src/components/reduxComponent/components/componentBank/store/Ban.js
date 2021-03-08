@@ -1,5 +1,6 @@
 import React from 'react';
 import {useSelector,useDispatch} from "react-redux";
+import {fetchProducts} from "../asyncActions/products";
 
 const Ban = () => {
     // get state
@@ -31,6 +32,11 @@ function delProduct(product) {
         dispatch({type:'delProduct',payload:product.id})
 
 }
+
+function addManyProduct() {
+        dispatch(fetchProducts())
+
+}
     return (
         <div>
             <p>Counter + and - </p>
@@ -40,6 +46,7 @@ function delProduct(product) {
             <div>
                 <span>Product</span>
                 <input type="button" value={'addProduct'} onClick={()=>addProduct(prompt())}/>
+                <input type="button" value={'addManyProduct'} onClick={()=>addManyProduct()}/>
                 {stateProduct.length===0 ? <div>No Product</div>
                 : stateProduct.map((item,index)=>{
                     return(
