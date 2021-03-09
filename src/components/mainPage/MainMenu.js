@@ -79,6 +79,12 @@ function MainMenu(props) {
                     onClick={()=>props.changeName("reduxcomponent")}>reduxComponent</li>
 
 
+                <li
+                    className={props.name==='reduxsaga'?'red':'blue'}
+                    key='reduxsaga'
+                    onClick={()=>props.changeName("reduxsaga")}>reduxSaga</li>
+
+
             </ul>
         </div>
     );
