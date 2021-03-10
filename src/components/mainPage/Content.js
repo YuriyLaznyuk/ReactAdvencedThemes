@@ -13,6 +13,10 @@ import {HooKuseEffect} from "../hooks/HooKuseEffect";
 import {CustomHooks} from "../hooks/CustomHooks";
 import AppContext from "../context/AppContext";
 import HookContext from "../hooks/HookContecst/HookContext";
+import ReactRouterMenu from "../reactRouter/ReactRouterMenu";
+import {BrowserRouter} from "react-router-dom";
+import ReduxComponent from "../reduxComponent/ReduxComponent";
+import ReduxSaga from "../reduxSaga/ReduxSaga";
 
 
 function Content(props) {
@@ -71,6 +75,19 @@ function Content(props) {
         case 'hookcontext':
             content=<HookContext/>
             break;
+
+        case 'reactroutermenu':
+            content=<ReactRouterMenu/>
+            break;
+
+        case 'reduxcomponent':
+            content=<ReduxComponent/>
+            break;
+
+        case 'reduxsaga':
+            content=<ReduxSaga/>
+            break;
+
 
 
         default:

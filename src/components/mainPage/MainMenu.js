@@ -68,6 +68,23 @@ function MainMenu(props) {
                     onClick={()=>props.changeName("hookcontext")}>hookContext</li>
 
 
+                <li
+                    className={props.name==='reactroutermenu'?'red':'blue'}
+                    key='reactroutermenu'
+                    onClick={()=>props.changeName("reactroutermenu")}>reactRouterMenu</li>
+
+                <li
+                    className={props.name==='reduxcomponent'?'red':'blue'}
+                    key='reduxcomponent'
+                    onClick={()=>props.changeName("reduxcomponent")}>reduxComponent</li>
+
+
+                <li
+                    className={props.name==='reduxsaga'?'red':'blue'}
+                    key='reduxsaga'
+                    onClick={()=>props.changeName("reduxsaga")}>reduxSaga</li>
+
+
             </ul>
         </div>
     );

@@ -14,7 +14,7 @@ let useTime=useTicker();
             {userWidth&&<p>Width {'<'} 1000px HELLO</p>}
             {!userWidth&&<p>Width {'>'} 1000px Bay Bay</p>}
 
-            <h3>Kiev online time {useTime.toLocaleTimeString()}</h3>
+            <h3>Ukraine Kiev online Time {useTime.toLocaleTimeString()}</h3>
 
         </div>
     );
