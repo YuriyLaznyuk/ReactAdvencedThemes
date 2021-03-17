@@ -17,6 +17,8 @@ import ReactRouterMenu from "../reactRouter/ReactRouterMenu";
 import {BrowserRouter} from "react-router-dom";
 import ReduxComponent from "../reduxComponent/ReduxComponent";
 import ReduxSaga from "../reduxSaga/ReduxSaga";
+import CompUseCallback from "../hooks/HookCallback/CompUseCallback";
+import CompUseMemo from "../hooks/HookMemo/CompUseMemo";
 
 
 function Content(props) {
@@ -86,6 +88,14 @@ function Content(props) {
 
         case 'reduxsaga':
             content=<ReduxSaga/>
+            break;
+
+        case 'useCallBack':
+            content=<CompUseCallback/>
+            break;
+
+        case 'useMemo':
+            content=<CompUseMemo/>
             break;
 
 
