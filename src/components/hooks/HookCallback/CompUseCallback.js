@@ -1,4 +1,5 @@
 import React,{useState,useCallback} from 'react';
+import UseCallbackSkill from "./UseCallbackSkill";
 
 const CompUseCallback = () => {
     const [age, setAge] = useState(99)
@@ -19,6 +20,7 @@ const CompUseCallback = () => {
             {/*child component is also re-rendered because the */}
             {/*doSomething prop is passed a new callback, with a new reference.*/}
             <Instructions doSomething={doSomething} />
+            <UseCallbackSkill/>
         </div>
     );
 };
