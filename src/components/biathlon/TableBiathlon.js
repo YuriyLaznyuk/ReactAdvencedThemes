@@ -70,6 +70,8 @@ function TableBiathlon(props) {
             setList([]);
         }
         setBtn(button);
+        setRevers('hike');
+        setFlag(false);
 
         setTimeout(() => {
             let arrDef = arrInit.sort(function (a, b) {
@@ -126,15 +128,16 @@ function TableBiathlon(props) {
 
                 <tr className='tableBiathlon-tr'>
                     <th>
+                        NAME
                         <button onClick={() => arrSort('name', -1, 1, 'btn1')}
                                 className={(btn === 'btn1') ? 'activeBtn' : null}>
-                            {(btn==='btn1' && revers==='hike') ? <span> &#9651;</span> : <span>&#9661;</span>}
+                            {(btn==='btn1' && revers==='drop') ? <span> &#9651;</span> : <span>&#9661;</span>}
 
                         </button>
 
-                        NAME
                     </th>
                     <th>
+                        HIT
                         <button onClick={() => arrSort('hit', 1, -1, 'btn3')}
                                 className={(btn === 'btn3') ? 'activeBtn' : null}>
                             {(btn==='btn3'&& revers==='drop' ) ? <span>&#9651;</span>
@@ -142,16 +145,15 @@ function TableBiathlon(props) {
 
                         </button>
 
-                        HIT
                     </th>
                     <th>
+                        SHORT RATE
                         <button onClick={() => arrSort('speed', 1, -1, 'btn5')}
                                 className={(btn === 'btn5') ? 'activeBtn' : null}>
 
                             {(btn ==='btn5' && revers === 'drop') ? <span> &#9651;</span> : <span> &#9661;</span>}
                         </button>
 
-                        SHORT RATE
                     </th>
                 </tr>
                 </thead>
