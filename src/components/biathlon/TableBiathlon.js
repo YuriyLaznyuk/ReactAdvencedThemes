@@ -3,7 +3,6 @@ import {biathletes} from "./biathletes";
 import './biathlon.css'
 
 const arrB = biathletes;
-const arrInit = biathletes;
 
 function TableBiathlon(props) {
     const [list, setList] = useState([]);
@@ -25,8 +24,6 @@ function TableBiathlon(props) {
 
         setFlag(!flag);
         setBtn(buttonn);
-
-        setTimeout(() => {
             let arrNew = arrB.sort(function (a, b) {
 
                 if (a[data] > b[data]) {
@@ -55,14 +52,10 @@ function TableBiathlon(props) {
                 return 0
 
             });
-            setTimeout(() => {
-                setList(
-                    arrNew
-                )
+                setList(arrNew)
+            // console.log(arrNew)
 
-            }, 300)
-            console.log(arrNew)
-        }, 100)
+
     }
 
     function defaultResult(data, button) {
@@ -72,27 +65,16 @@ function TableBiathlon(props) {
         setBtn(button);
         setRevers('hike');
         setFlag(false);
+            let arrDef = arrB.sort((a,b)=>(a[data]-b[data]));
 
-        setTimeout(() => {
-            let arrDef = arrInit.sort(function (a, b) {
-                if (a[data] > b[data]) {
-                    return -1;
-                }
-                if (a[data<b[data]]){
-                    return 1;
-                }
-                return 0;
-            });
-            setTimeout(()=>{
-              setList(arrInit.reverse());
-            },300)
-
-        },100)
+              setList(arrDef);
 
     }
 
     function nameSearch(name, search) {
         setBtn(search);
+        setRevers('hike');
+        setFlag(false);
         if (!name) {
             return
         }
@@ -113,7 +95,7 @@ function TableBiathlon(props) {
                         <input type="text" value={name} placeholder="name" onChange={e => setName(e.target.value)}/>
 
                         <button onClick={() => nameSearch(name, 'search')}
-                                className={(btn === 'search') && null}>Search
+                                className={(btn === 'search') ? "activeBtn" : null}>Search
                         </button>
 
                     </th>
