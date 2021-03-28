@@ -2,19 +2,17 @@ import React, {useState} from 'react';
 import {biathletes} from "./biathletes";
 import './biathlon.css'
 
-const arrB = biathletes;
+const arrB = biathletes.sort((a,b)=>(a.id-b.id));
 
 function TableBiathlon(props) {
-    const [list, setList] = useState([]);
+    const [list, setList] = useState(arrB);
     const [name, setName] = useState();
     const [btn, setBtn] = useState(null);
     const [revers, setRevers] = useState('hike');
     const [flag, setFlag] = useState(false)
 
     function arrSort(data, x, y, buttonn) {
-        if (list.length > 0) {
-            setList([]);
-        }
+
 
         // one button logic
 
@@ -24,7 +22,7 @@ function TableBiathlon(props) {
 
         setFlag(!flag);
         setBtn(buttonn);
-            let arrNew = arrB.sort(function (a, b) {
+            let arrNew = list.sort(function (a, b) {
 
                 if (a[data] > b[data]) {
                     switch (revers) {
@@ -53,15 +51,12 @@ function TableBiathlon(props) {
 
             });
                 setList(arrNew)
-            // console.log(arrNew)
 
 
     }
 
     function defaultResult(data, button) {
-        if (list.length > 0) {
-            setList([]);
-        }
+
         setBtn(button);
         setRevers('hike');
         setFlag(false);
@@ -111,7 +106,7 @@ function TableBiathlon(props) {
                 <tr className='tableBiathlon-tr'>
                     <th>
                         NAME
-                        <button onClick={() => arrSort('name', -1, 1, 'btn1')}
+                        <button onClick={() => arrSort('name', 1, -1, 'btn1')}
                                 className={(btn === 'btn1') ? 'activeBtn' : null}>
                             {(btn==='btn1' && revers==='drop') ? <span> &#9651;</span> : <span>&#9661;</span>}
 
