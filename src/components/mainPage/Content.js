@@ -19,6 +19,9 @@ import ReduxComponent from "../reduxComponent/ReduxComponent";
 import ReduxSaga from "../reduxSaga/ReduxSaga";
 import CompUseCallback from "../hooks/HookCallback/CompUseCallback";
 import CompUseMemo from "../hooks/HookMemo/CompUseMemo";
+import JestHello from "../reactJest/JestHello";
+import AppJest from "../reactJest/AppJest";
+import TableBiathlon from "../biathlon/TableBiathlon";
 
 
 function Content(props) {
@@ -98,7 +101,13 @@ function Content(props) {
             content=<CompUseMemo/>
             break;
 
+        case 'jestHello':
+            content=<AppJest/>
+            break;
 
+        case 'tableBiathlon':
+            content=<TableBiathlon/>
+            break;
 
         default:
             content = <h1 className='content_h1'>MAIN PAGE CONTENT</h1>

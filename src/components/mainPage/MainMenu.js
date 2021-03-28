@@ -94,6 +94,17 @@ function MainMenu(props) {
                     key='useMemo'
                     onClick={()=>props.changeName("useMemo")}>useMemo</li>
 
+                <li
+                    className={props.name==='jestHello'?'red':'blue'}
+                    key='jestHello'
+                    onClick={()=>props.changeName("jestHello")}>jestHello</li>
+
+                <li
+                    className={props.name==='tableBiathlon'?'red':'blue'}
+                    key='tableBiathlon'
+                    onClick={()=>props.changeName("tableBiathlon")}>tableBiathlon</li>
+
+
 
 
 

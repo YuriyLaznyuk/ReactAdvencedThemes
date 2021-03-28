@@ -1,4 +1,5 @@
 import React,{useState,useMemo} from 'react';
+import UseMemoSkills from "./UseMemoSkills";
 
 
 function CompUseMemo(props) {
@@ -13,6 +14,7 @@ function count() {
         <div>
             <Heads col={col} clickCount={count}/>
             <MessagesHeads basic={getBasic()}/>
+            <UseMemoSkills/>
         </div>
     );
 }
