@@ -12,16 +12,16 @@ function BanRedux(props) {
 
 // const store=createStore(countReducer);
 //     if many reducers
-const combineReducer=combineReducers(
-    {count:countReducer,product:productReducer})
+    const combineReducer = combineReducers(
+        {count: countReducer, product: productReducer})
 
-    const store=createStore(combineReducer, composeWithDevTools(applyMiddleware(thunk)))
+    const store = createStore(combineReducer, composeWithDevTools(applyMiddleware(thunk)))
 
-return(
-    <Provider store={store}>
-        <Ban/>
-    </Provider>
-)
+    return (
+        <Provider store={store}>
+            <Ban/>
+        </Provider>
+    )
 
 
 }

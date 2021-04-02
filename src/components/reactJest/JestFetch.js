@@ -1,20 +1,18 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import useFetch from "react-fetch-hook";
 
 function JestFetch(props) {
-    const { isLoading, error, data } = useFetch("https://jsonplaceholder.typicode.com/users");
-const[user,setUser]=useState('');
+    const {isLoading, error, data} = useFetch("https://jsonplaceholder.typicode.com/users");
 
-let arr=data;
-useEffect(()=>{
- setUser(arr);
-})
-function delArr(item) {
-    // let arr1=arr;
-arr.filter(elem=>elem.name!==item.name);
+    let arr = data;
+
+    function delArr(item) {
+        // let arr1=arr;
+        arr.filter(elem => elem.name !== item.name);
 // arr=arr1;
-}
-console.log(arr);
+    }
+
+    console.log(arr);
     if (isLoading) return "Loading...";
     if (error) return "Error!";
 
@@ -23,22 +21,22 @@ console.log(arr);
         <div>
             {/*<pre>{JSON.stringify(arr, null, 2)}</pre>*/}
             <table>
-            <thead>
-            <tr>
-                <th colSpan={4}>JestFetch useFetch</th>
-            </tr>
-            <tr>
-                <th>name</th>
-                <th>username</th>
-                <th>website</th>
-                <th>index</th>
-            </tr>
-            </thead>
+                <thead>
+                <tr>
+                    <th colSpan={4}>JestFetch useFetch</th>
+                </tr>
+                <tr>
+                    <th>name</th>
+                    <th>username</th>
+                    <th>website</th>
+                    <th>index</th>
+                </tr>
+                </thead>
                 <tbody>
                 {
 
-                    arr.map((item,index)=>
-                        <tr key={index} onClick={()=>delArr(item)}>
+                    arr.map((item, index) =>
+                        <tr key={index} onClick={() => delArr(item)}>
                             <td>{item.name}</td>
                             <td>{item.username}</td>
                             <td>{item.website}</td>
@@ -52,4 +50,5 @@ console.log(arr);
         </div>
     );
 }
+
 export default JestFetch;

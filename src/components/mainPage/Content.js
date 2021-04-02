@@ -14,14 +14,13 @@ import {CustomHooks} from "../hooks/CustomHooks";
 import AppContext from "../context/AppContext";
 import HookContext from "../hooks/HookContecst/HookContext";
 import ReactRouterMenu from "../reactRouter/ReactRouterMenu";
-import {BrowserRouter} from "react-router-dom";
 import ReduxComponent from "../reduxComponent/ReduxComponent";
 import ReduxSaga from "../reduxSaga/ReduxSaga";
 import CompUseCallback from "../hooks/HookCallback/CompUseCallback";
 import CompUseMemo from "../hooks/HookMemo/CompUseMemo";
-import JestHello from "../reactJest/JestHello";
 import AppJest from "../reactJest/AppJest";
 import TableBiathlon from "../biathlon/TableBiathlon";
+import UseRefHook from "../hooks/useRefHook/UseRefHook";
 
 
 function Content(props) {
@@ -47,7 +46,7 @@ function Content(props) {
 
 
         case 'reactmemo':
-            content = <MemoComponent email={name+'@ukr.net'}/>
+            content = <MemoComponent email={name + '@ukr.net'}/>
             break;
 
 
@@ -63,50 +62,54 @@ function Content(props) {
             content = <FormValidation/>
             break;
         case 'useStatehook':
-            content=<HookExample/>
+            content = <HookExample/>
             break;
 
         case 'useEffecthook':
-            content=<HooKuseEffect/>
+            content = <HooKuseEffect/>
             break;
         case 'customhook':
-            content=<CustomHooks/>
+            content = <CustomHooks/>
             break;
 
         case 'context':
-            content=<AppContext/>
+            content = <AppContext/>
             break;
 
         case 'hookcontext':
-            content=<HookContext/>
+            content = <HookContext/>
             break;
 
         case 'reactroutermenu':
-            content=<ReactRouterMenu/>
+            content = <ReactRouterMenu/>
             break;
 
         case 'reduxcomponent':
-            content=<ReduxComponent/>
+            content = <ReduxComponent/>
             break;
 
         case 'reduxsaga':
-            content=<ReduxSaga/>
+            content = <ReduxSaga/>
             break;
 
         case 'useCallBack':
-            content=<CompUseCallback/>
+            content = <CompUseCallback/>
             break;
 
         case 'useMemo':
-            content=<CompUseMemo/>
+            content = <CompUseMemo/>
             break;
 
         case 'jestHello':
-            content=<AppJest/>
+            content = <AppJest/>
             break;
 
         case 'tableBiathlon':
-            content=<TableBiathlon/>
+            content = <TableBiathlon/>
+            break;
+
+        case 'useRefHook':
+            content = <UseRefHook/>
             break;
 
         default:

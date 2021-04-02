@@ -1,10 +1,10 @@
-const defaultState={
- customers:[]
+const defaultState = {
+    customers: []
 }
 
-const add_customer='add_customer';
-const remove_customer='remove_customer';
-const delete_customer='delete_customer';
+const add_customer = 'add_customer';
+const remove_customer = 'remove_customer';
+const delete_customer = 'delete_customer';
 
 
 export const customerReducer = (state = defaultState, action) => {
@@ -14,12 +14,16 @@ export const customerReducer = (state = defaultState, action) => {
             return {...state, customers: state.customers.concat(action.payload)}
 
         case remove_customer:
-            return {...state, customers: state.customers.filter(customer=>
-                    customer.id!==action.payload)}
+            return {
+                ...state, customers: state.customers.filter(customer =>
+                    customer.id !== action.payload)
+            }
 
         case delete_customer:
-            return {...state, customers: state.customers.filter(customer=>
-                    customer.name!==action.payload)}
+            return {
+                ...state, customers: state.customers.filter(customer =>
+                    customer.name !== action.payload)
+            }
 
 
         default:
@@ -27,12 +31,13 @@ export const customerReducer = (state = defaultState, action) => {
 
     }
 }
+
 export function addCustomerAction(payload) {
-return ({type:add_customer,payload})
+    return ({type: add_customer, payload})
 }
 
 export function removeCustomerAction(payload) {
-    return ({type:remove_customer,payload})
+    return ({type: remove_customer, payload})
 }
 
 export function deleteCustomerAction(payload) {

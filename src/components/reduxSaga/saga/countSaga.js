@@ -1,7 +1,8 @@
-import {put,takeEvery} from "redux-saga/effects"
+import {put, takeEvery} from "redux-saga/effects"
 import {asyncAddCount, asyncMinusCount, methodAddCount, methodMinusCount} from "../store/buttonReducer";
+
 function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve,ms))
+    return new Promise(resolve => setTimeout(resolve, ms))
 
 }
 
@@ -12,14 +13,14 @@ function* addWorker() {
 }
 
 
-
 function* minusWorker() {
     yield delay(1000);
     yield put(methodMinusCount())
 
 }
+
 //passing the async action type and worker
 export function* countWatcher() {
-yield takeEvery(asyncAddCount,addWorker)
-yield takeEvery(asyncMinusCount,minusWorker)
+    yield takeEvery(asyncAddCount, addWorker)
+    yield takeEvery(asyncMinusCount, minusWorker)
 }

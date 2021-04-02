@@ -20,7 +20,7 @@ function Bank(props) {
 
     function addCustomer(name) {
         const customer = {
-            name:name,
+            name: name,
             id: Date.now(),
         }
         // dispatch({type: 'add_customer', payload: customer})
@@ -29,8 +29,9 @@ function Bank(props) {
 
     function removeCustomer(customer) {
 // dispatch({type:'remove_customer', payload:customer.id})
-dispatch(removeCustomerAction(customer.id))
+        dispatch(removeCustomerAction(customer.id))
     }
+
     function deleteCustomer(name) {
         dispatch(deleteCustomerAction(name))
 
@@ -51,7 +52,7 @@ dispatch(removeCustomerAction(customer.id))
                 {
                     customers.length > 0 ?
                         customers.map(item =>
-                            <div onClick={()=>removeCustomer(item)}>
+                            <div onClick={() => removeCustomer(item)}>
                                 {item.name}</div>
                         ) : <div>Массив пустой</div>
                 }
