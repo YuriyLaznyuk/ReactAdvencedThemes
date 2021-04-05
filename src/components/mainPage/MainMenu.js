@@ -109,6 +109,12 @@ function MainMenu(props) {
                     key='useRefHook'
                     onClick={()=>props.changeName("useRefHook")}>useRefHook</li>
 
+                <li
+                    className={props.name==='useReducerHook'?'red':'blue'}
+                    key='useReducerHook'
+                    onClick={()=>props.changeName("useReducerHook")}>useReducerHook</li>
+
+
 
 
 

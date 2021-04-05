@@ -10,11 +10,11 @@ function Bank(props) {
     const customers = useSelector(state => state.customers.customers);
 
     function addCash(cash) {
-        dispatch({type: 'add_cash', payload: cash})
+        dispatch({type: 'add_cash', payload: cash});
     }
 
     function getCash(cash) {
-        dispatch({type: 'get_cash', payload: cash})
+        dispatch({type: 'get_cash', payload: cash});
 
     }
 
@@ -22,18 +22,18 @@ function Bank(props) {
         const customer = {
             name: name,
             id: Date.now(),
-        }
+        };
         // dispatch({type: 'add_customer', payload: customer})
-        dispatch(addCustomerAction(customer))
+        dispatch(addCustomerAction(customer));
     }
 
     function removeCustomer(customer) {
 // dispatch({type:'remove_customer', payload:customer.id})
-        dispatch(removeCustomerAction(customer.id))
+        dispatch(removeCustomerAction(customer.id));
     }
 
     function deleteCustomer(name) {
-        dispatch(deleteCustomerAction(name))
+        dispatch(deleteCustomerAction(name));
 
     }
 
