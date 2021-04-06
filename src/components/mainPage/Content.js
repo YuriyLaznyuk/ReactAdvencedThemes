@@ -1,11 +1,11 @@
 import React from 'react';
 import Parent from "../portal/Parent";
-import './mainPage.css'
+import './mainPage.css';
 import RenderProps from "../renderProps/RenderProps";
 import PagePropsType from "../propstype/PagePropsType";
 import FileInput from "../fileinput/FileInput";
 import {MemoComponent} from "../reactmemo/ReactMemo";
-import Timer from "../timer/Timer"
+import Timer from "../timer/Timer";
 import FocusBlur from "../focusblur/FocusBlur";
 import FormValidation from "../formValidation/FormValidation";
 import {HookExample} from "../hooks/HooKuseState";
@@ -14,15 +14,14 @@ import {CustomHooks} from "../hooks/CustomHooks";
 import AppContext from "../context/AppContext";
 import HookContext from "../hooks/HookContecst/HookContext";
 import ReactRouterMenu from "../reactRouter/ReactRouterMenu";
-import {BrowserRouter} from "react-router-dom";
 import ReduxComponent from "../reduxComponent/ReduxComponent";
 import ReduxSaga from "../reduxSaga/ReduxSaga";
 import CompUseCallback from "../hooks/HookCallback/CompUseCallback";
 import CompUseMemo from "../hooks/HookMemo/CompUseMemo";
-import JestHello from "../reactJest/JestHello";
 import AppJest from "../reactJest/AppJest";
 import TableBiathlon from "../biathlon/TableBiathlon";
-
+import UseRefHook from "../hooks/useRefHook/UseRefHook";
+import UseReducerHook from "../hooks/useReducerHook/UseReducerHook";
 
 function Content(props) {
     let name = props.name;
@@ -38,83 +37,88 @@ function Content(props) {
             break;
 
         case 'propstype':
-            content = <PagePropsType/>
+            content = <PagePropsType/>;
             break;
 
         case 'fileinput':
-            content = <FileInput/>
+            content = <FileInput/>;
             break;
-
 
         case 'reactmemo':
-            content = <MemoComponent email={name+'@ukr.net'}/>
+            content = <MemoComponent email={name + '@ukr.net'}/>;
             break;
 
-
         case 'timer':
-            content = <Timer/>
+            content = <Timer/>;
             break;
 
         case 'focusblur':
-            content = <FocusBlur/>
+            content = <FocusBlur/>;
             break;
 
         case 'formvalidation':
-            content = <FormValidation/>
+            content = <FormValidation/>;
             break;
         case 'useStatehook':
-            content=<HookExample/>
+            content = <HookExample/>;
             break;
 
         case 'useEffecthook':
-            content=<HooKuseEffect/>
+            content = <HooKuseEffect/>;
             break;
         case 'customhook':
-            content=<CustomHooks/>
+            content = <CustomHooks/>;
             break;
 
         case 'context':
-            content=<AppContext/>
+            content = <AppContext/>;
             break;
 
         case 'hookcontext':
-            content=<HookContext/>
+            content = <HookContext/>;
             break;
 
         case 'reactroutermenu':
-            content=<ReactRouterMenu/>
+            content = <ReactRouterMenu/>;
             break;
 
         case 'reduxcomponent':
-            content=<ReduxComponent/>
+            content = <ReduxComponent/>;
             break;
 
         case 'reduxsaga':
-            content=<ReduxSaga/>
+            content = <ReduxSaga/>;
             break;
 
         case 'useCallBack':
-            content=<CompUseCallback/>
+            content = <CompUseCallback/>;
             break;
 
         case 'useMemo':
-            content=<CompUseMemo/>
+            content = <CompUseMemo/>;
             break;
 
         case 'jestHello':
-            content=<AppJest/>
+            content = <AppJest/>;
             break;
 
         case 'tableBiathlon':
-            content=<TableBiathlon/>
+            content = <TableBiathlon/>;
+            break;
+
+        case 'useRefHook':
+            content = <UseRefHook/>;
+            break;
+
+        case 'useReducerHook':
+            content = <UseReducerHook/>;
             break;
 
         default:
-            content = <h1 className='content_h1'>MAIN PAGE CONTENT</h1>
+            content = <h1 className='content_h1'>MAIN PAGE CONTENT</h1>;
             break;
 
     }
-
 
     return (
         <div>

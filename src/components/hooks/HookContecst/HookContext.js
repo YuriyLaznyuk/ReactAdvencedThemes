@@ -1,4 +1,4 @@
-import React,{useState,useContext} from 'react';
+import React,{useState} from 'react';
 import {themes_hook,Context_hook} from "./hookTheme";
 import HookContextButton from "./HookContextButton";
 import HeadButton from "./HeadButton";

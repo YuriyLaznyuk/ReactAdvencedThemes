@@ -1,22 +1,22 @@
-import React,{useEffect} from 'react';
+import React, {useEffect} from 'react';
 
 function JestTimers(props) {
-    useEffect(()=>{
-        const timeOut=setTimeout(()=>{
+    useEffect(() => {
+        const timeOut = setTimeout(() => {
             props.onSelect(null);
-        },5000);
+        }, 5000);
         return () => {
             clearTimeout(timeOut);
         };
-    },[props.onSelect]);
+    }, [props.onSelect]);
 
 
     return (
         <div>
             {
-                [1,2,3,4].map((choice,index)=>
+                [1, 2, 3, 4].map((choice, index) =>
                     <button key={choice} data-test={choice}
-                    onClick={()=>props.onSelect(choice)}>
+                            onClick={() => props.onSelect(choice)}>
                         {choice}
                     </button>
                 )
@@ -26,7 +26,6 @@ function JestTimers(props) {
         </div>
     );
 }
-
 
 
 export default JestTimers;

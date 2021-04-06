@@ -1,8 +1,9 @@
+/* eslint-disable default-case */
 import React, {useState} from 'react';
 import {biathletes} from "./biathletes";
 import './biathlon.css'
 
-const arrB = biathletes.sort((a,b)=>(a.id-b.id));
+const arrB = biathletes.sort((a, b) => (a.id - b.id));
 
 function TableBiathlon(props) {
     const [list, setList] = useState(arrB);
@@ -22,35 +23,37 @@ function TableBiathlon(props) {
 
         setFlag(!flag);
         setBtn(buttonn);
-            let arrNew = list.sort(function (a, b) {
+        let arrNew = list.sort(function (a, b) {
 
-                if (a[data] > b[data]) {
-                    switch (revers) {
-                        case "hike":
-                            return x;
+            if (a[data] > b[data]) {
+                // eslint-disable-next-line default-case
+                switch (revers) {
+                    case "hike":
+                        return x;
 
-                        case "drop":
-                            return -x;
-                    }
+                    case "drop":
+                        return -x;
+                }
+
+            }
+
+            if (a[data] < b[data]) {
+
+                switch (revers) {
+                    case "hike":
+                        return y;
+
+                    case "drop":
+                        return -y;
+
 
                 }
 
-                if (a[data] < b[data]) {
+            }
+            return 0
 
-                    switch (revers) {
-                        case "hike":
-                            return y;
-
-                        case "drop":
-                            return -y;
-
-                    }
-
-                }
-                return 0
-
-            });
-                setList(arrNew)
+        });
+        setList(arrNew)
 
 
     }
@@ -60,9 +63,9 @@ function TableBiathlon(props) {
         setBtn(button);
         setRevers('hike');
         setFlag(false);
-            let arrDef = arrB.sort((a,b)=>(a[data]-b[data]));
+        let arrDef = arrB.sort((a, b) => (a[data] - b[data]));
 
-              setList(arrDef);
+        setList(arrDef);
 
     }
 
@@ -108,7 +111,7 @@ function TableBiathlon(props) {
                         NAME
                         <button onClick={() => arrSort('name', 1, -1, 'btn1')}
                                 className={(btn === 'btn1') ? 'activeBtn' : null}>
-                            {(btn==='btn1' && revers==='drop') ? <span> &#9651;</span> : <span>&#9661;</span>}
+                            {(btn === 'btn1' && revers === 'drop') ? <span> &#9651;</span> : <span>&#9661;</span>}
 
                         </button>
 
@@ -117,8 +120,8 @@ function TableBiathlon(props) {
                         HIT
                         <button onClick={() => arrSort('hit', 1, -1, 'btn3')}
                                 className={(btn === 'btn3') ? 'activeBtn' : null}>
-                            {(btn==='btn3'&& revers==='drop' ) ? <span>&#9651;</span>
-                                : <span>&#9661;</span> 	}
+                            {(btn === 'btn3' && revers === 'drop') ? <span>&#9651;</span>
+                                : <span>&#9661;</span>}
 
                         </button>
 
@@ -128,7 +131,7 @@ function TableBiathlon(props) {
                         <button onClick={() => arrSort('speed', 1, -1, 'btn5')}
                                 className={(btn === 'btn5') ? 'activeBtn' : null}>
 
-                            {(btn ==='btn5' && revers === 'drop') ? <span> &#9651;</span> : <span> &#9661;</span>}
+                            {(btn === 'btn5' && revers === 'drop') ? <span> &#9651;</span> : <span> &#9661;</span>}
                         </button>
 
                     </th>

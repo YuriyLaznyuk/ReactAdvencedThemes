@@ -104,6 +104,17 @@ function MainMenu(props) {
                     key='tableBiathlon'
                     onClick={()=>props.changeName("tableBiathlon")}>tableBiathlon</li>
 
+                <li
+                    className={props.name==='useRefHook'?'red':'blue'}
+                    key='useRefHook'
+                    onClick={()=>props.changeName("useRefHook")}>useRefHook</li>
+
+                <li
+                    className={props.name==='useReducerHook'?'red':'blue'}
+                    key='useReducerHook'
+                    onClick={()=>props.changeName("useReducerHook")}>useReducerHook</li>
+
+
 
 
 

@@ -1,4 +1,4 @@
-import React,{useState,useCallback} from 'react';
+import React, {useState, useCallback} from 'react';
 import UseCallbackSkill from "./UseCallbackSkill";
 
 const CompUseCallback = () => {
@@ -10,8 +10,9 @@ const CompUseCallback = () => {
     // const  doSomething=useCallback(()=>someValue,[someValue])
 
     // break re-rendering
-    const  doSomething=useCallback(()=>{ return someValue},[someValue])
-
+    const doSomething = useCallback(() => {
+        return someValue
+    }, [someValue])
 
 
     return (
@@ -19,7 +20,7 @@ const CompUseCallback = () => {
             <Age age={age} handleClick={handleClick} handleReset={handleReset}/>
             {/*child component is also re-rendered because the */}
             {/*doSomething prop is passed a new callback, with a new reference.*/}
-            <Instructions doSomething={doSomething} />
+            <Instructions doSomething={doSomething}/>
             <UseCallbackSkill/>
         </div>
     );
@@ -28,19 +29,14 @@ const CompUseCallback = () => {
 export default CompUseCallback;
 
 
-
-
-
-
-
-const Age = ({ age, handleClick, handleReset }) => {
+const Age = ({age, handleClick, handleReset}) => {
     return (
         <div>
-            <div style={{ border: '2px', background: "papayawhip", padding: "1rem" }}>
+            <div style={{border: '2px', background: "papayawhip", padding: "1rem"}}>
                 Today I am {age} Years of Age
             </div>
             <pre> - click the button below 👇 </pre>
-            <button onClick={handleClick}>Get older! </button>
+            <button onClick={handleClick}>Get older!</button>
             <button onClick={handleReset}>Reset to Zero</button>
         </div>
     )
@@ -48,7 +44,7 @@ const Age = ({ age, handleClick, handleReset }) => {
 
 const Instructions = ((props) => {
     return (
-        <div style={{ background: 'black', color: 'yellow', padding: "1rem" }}>
+        <div style={{background: 'black', color: 'yellow', padding: "1rem"}}>
             <p>Follow the instructions above as closely as possible {props.doSomething()}</p>
         </div>
     )

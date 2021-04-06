@@ -5,5 +5,5 @@ import {peopleWatcher} from "./peopleSaga";
 //combine watchers
 //return run()
 export function* globalWatcher() {
-yield all([countWatcher(),peopleWatcher()])
+    yield all([countWatcher(), peopleWatcher()])
 }

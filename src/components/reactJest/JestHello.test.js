@@ -18,7 +18,7 @@ afterEach(()=>{
     container=null;
 });
 
-test('renders with or without a name ', function () {
+test('renders with or without a name', function () {
 
     // no name props
     act(()=>{

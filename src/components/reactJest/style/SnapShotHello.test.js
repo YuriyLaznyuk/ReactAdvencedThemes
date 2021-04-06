@@ -18,7 +18,7 @@ afterEach(()=>{
     container=null;
 })
 
-test('test hello snapshot', ()=>{
+test('hello snapshot', ()=>{
 
    act(()=>{
        render(<JestHello/>,container);

@@ -37,6 +37,8 @@ class FormValidation extends Component {
                 passwordValid=value.length>=6;
                 formErrorObject.password=passwordValid ? '' : 'invalid password';
                 break;
+            default:
+                break;
         }
         this.setState({formErrors:formErrorObject,
             emailValid: emailValid,

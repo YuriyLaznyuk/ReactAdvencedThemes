@@ -6,15 +6,17 @@ class Parent extends Component {
 
     constructor(props) {
         super(props);
-        this.state={
-            click:0,
+        this.state = {
+            click: 0,
         }
     }
-btnClick=()=>{
-    this.setState({
-        click: this.state.click+1
-    });
-}
+
+    btnClick = () => {
+        this.setState({
+            click: this.state.click + 1
+        });
+    }
+
     render() {
         return (
             <div onClick={this.btnClick}>
@@ -22,7 +24,7 @@ btnClick=()=>{
                 <p>Look in the browsers</p>
 
                 <Modal>
-                   <Child/>
+                    <Child/>
                 </Modal>
             </div>
         );

@@ -7,8 +7,8 @@ import './routs/ReactRouterMenu.css'
 
 function ReactRouterMenu(props) {
     return (
-            <Router>
-        <div className='ReactRouterMenu'>
+        <Router>
+            <div className='ReactRouterMenu'>
                 <h1>ReactRouterMenu</h1>
                 <nav className='ReactRouterMenu__nav'>
                     <ul className='ReactRouterMenu__ul'>
@@ -33,8 +33,8 @@ function ReactRouterMenu(props) {
                 </Switch>
 
 
-        </div>
-            </Router>
+            </div>
+        </Router>
     );
 }
 

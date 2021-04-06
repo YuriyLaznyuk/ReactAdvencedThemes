@@ -8,9 +8,9 @@ import thunk from "redux-thunk";
 
 
 function ReduxThunk(props) {
-const store=createStore(usersReducer,composeWithDevTools(
-    applyMiddleware(thunk)
-))
+    const store = createStore(usersReducer, composeWithDevTools(
+        applyMiddleware(thunk)
+    ))
 // const store = createStore(usersReducer)
     return (
         <Provider store={store}>

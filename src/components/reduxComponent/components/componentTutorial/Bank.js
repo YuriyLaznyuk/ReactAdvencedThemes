@@ -10,29 +10,30 @@ function Bank(props) {
     const customers = useSelector(state => state.customers.customers);
 
     function addCash(cash) {
-        dispatch({type: 'add_cash', payload: cash})
+        dispatch({type: 'add_cash', payload: cash});
     }
 
     function getCash(cash) {
-        dispatch({type: 'get_cash', payload: cash})
+        dispatch({type: 'get_cash', payload: cash});
 
     }
 
     function addCustomer(name) {
         const customer = {
-            name:name,
+            name: name,
             id: Date.now(),
-        }
+        };
         // dispatch({type: 'add_customer', payload: customer})
-        dispatch(addCustomerAction(customer))
+        dispatch(addCustomerAction(customer));
     }
 
     function removeCustomer(customer) {
 // dispatch({type:'remove_customer', payload:customer.id})
-dispatch(removeCustomerAction(customer.id))
+        dispatch(removeCustomerAction(customer.id));
     }
+
     function deleteCustomer(name) {
-        dispatch(deleteCustomerAction(name))
+        dispatch(deleteCustomerAction(name));
 
     }
 
@@ -51,7 +52,7 @@ dispatch(removeCustomerAction(customer.id))
                 {
                     customers.length > 0 ?
                         customers.map(item =>
-                            <div onClick={()=>removeCustomer(item)}>
+                            <div onClick={() => removeCustomer(item)}>
                                 {item.name}</div>
                         ) : <div>Массив пустой</div>
                 }

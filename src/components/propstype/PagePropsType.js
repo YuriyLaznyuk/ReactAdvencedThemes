@@ -2,7 +2,6 @@ import React from 'react';
 import PropsType from "./PropsType";
 
 function PagePropsType(props) {
-   let a=450;
 
     return (
         <div>
@@ -11,7 +10,7 @@ function PagePropsType(props) {
                     adipisicing elit. Dolorem laboriosam laudantium
                     necessitatibus optio porro quasi sunt ullam. Ad qui,
                     voluptate.</p>
-                </PropsType>
+            </PropsType>
 
         </div>
     );
