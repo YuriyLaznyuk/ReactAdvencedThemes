@@ -76,13 +76,13 @@ function LoginUseReducer(props) {
                     ) : (
                         <form onSubmit={onSubmit}>
                             {error && <p>{error}</p>}
-                            <p>Please Login</p>
+                            <p>Please Login "user"</p>
                             <input type="text" placeholder={'username'} value={username}
                                    onChange={e => dispatch({
                                        type: 'field', fieldName: 'username'
                                        , payload: e.target.value
                                    })}/>
-                            <p>Please Password</p>
+                            <p>Please Password "password"</p>
                             <input type="text" placeholder={'password'} value={password}
                                    onChange={e => dispatch({
                                        type: 'field', fieldName: 'password'

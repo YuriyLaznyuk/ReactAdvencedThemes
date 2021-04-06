@@ -43,10 +43,10 @@ function LoginUseState(props) {
                 ) : (
                     <form onSubmit={onSubmit}>
                         {error && <p>{error}</p>}
-                        <p>Please Login</p>
+                        <p>Please Login "user"</p>
                         <input type="text" placeholder={'username'} value={username}
                                onChange={(e) => setUsername(e.target.value)}/>
-                        <p>Please Password</p>
+                        <p>Please Password "password"</p>
                         <input type="text" placeholder={'password'} value={password}
                                onChange={e => setPassword(e.target.value)}/>
 
