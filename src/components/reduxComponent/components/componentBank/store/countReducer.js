@@ -1,4 +1,4 @@
-// const action={type:'?', payload:"?"}
+ // const action={type:'?', payload:"?"}
 const defaultCount={count:1}
 
 // trow action to function

@@ -12,6 +12,11 @@ function TableBiathlon(props) {
     const [revers, setRevers] = useState('hike');
     const [flag, setFlag] = useState(false)
 
+    const [data,setData]=useState(true)
+function changeData() {
+        setData(!data)
+
+}
     function arrSort(data, x, y, buttonn) {
 
 
@@ -153,6 +158,7 @@ function TableBiathlon(props) {
                 }
                 </tbody>
             </table>
+            <button onClick={()=>changeData()}>Button {data ? "Hello" : 'Bay-Bay'}</button>
         </div>
     );
 }

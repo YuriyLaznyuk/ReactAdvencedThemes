@@ -1,28 +1,28 @@
+// eslint-disable-next-line no-unused-vars
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 
-let modalRoot=document.getElementById('modal_root')
+let modalRoot = document.getElementById('modal_root');
+
 class Modal extends Component {
     constructor(props) {
         super(props);
-        this.el=document.createElement('div')
-        this.el.innerHTML='El---El'
+        this.el = document.createElement('div');
+        this.el.innerHTML = 'El---El';
     }
 
     componentDidMount() {
-        modalRoot.appendChild(this.el)
+        modalRoot.appendChild(this.el);
     }
 
-   componentWillUnmount() {
+    componentWillUnmount() {
 
-    modalRoot.removeChild(this.el)
-   }
-
-
+        modalRoot.removeChild(this.el);
+    }
 
     render() {
         return (
-          ReactDOM.createPortal(
+            ReactDOM.createPortal(
                 this.props.children,
                 this.el
             )

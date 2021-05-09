@@ -7,6 +7,27 @@ function UseReducerHook(props) {
     const initialState = {quantity: 0};
     const [state, dispatch] = useReducer(reducer, initialState);
     const [count, setCount] = useState(0);
+    const [col, setColl]=useState(0);
+
+
+    function clickColl(d) {
+        setColl(col+d);
+        // setColl(col+d);
+        // setColl(col+d);
+        // setColl(col+d);
+
+    }
+
+// test function
+    // function clickColl(col) {
+    //     setColl(col=>col+1);
+    //     setColl(col=>col+1);
+    //     setColl(col=>col+1);
+    //     setColl(col=>col+1);
+    //
+    //
+    // }
+
 
     function reducer(state, action) {
         switch (action.type) {
@@ -35,6 +56,9 @@ function UseReducerHook(props) {
 
     return (
         <div style={{textAlign: 'center'}}>
+            <button onClick={()=>clickColl(1)}>{col + " BUTTON"}</button>
+            <button onClick={()=>clickColl(-col)}>{col + " reset"}</button>
+
             <h2>useReducer button</h2>
             <button onClick={() => multiClick("ADD_TO_CART", 10)}>Add to Cart</button>
             <button style={{margin: 10}} onClick={() => multiClick("REMOVE_FROM_CART", 1)}>Remove to Cart</button>

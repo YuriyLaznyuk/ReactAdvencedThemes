@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, {useEffect, useState} from 'react';
 
 export function useWindowWidth(props) {
@@ -13,9 +14,8 @@ export function useWindowWidth(props) {
         window.addEventListener('resize', sizeControl);
         return (
             () => window.removeEventListener('resize', sizeControl)
-        )
-    }, [])
-
+        );
+    }, []);
 
     return (
         useSize
